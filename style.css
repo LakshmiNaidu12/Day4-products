@@ -1,0 +1,69 @@
+#products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 220px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    animation: rave-lights 2s infinite linear;
+}
+
+@keyframes rave-lights {
+    0% {
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.8),   /* Red */
+                    0 0 30px rgba(0, 255, 0, 0.8),   /* Green */
+                    0 0 40px rgba(0, 0, 255, 0.8);   /* Blue */
+    }
+    25% {
+        box-shadow: 0 0 20px rgba(255, 255, 0, 0.8), /* Yellow */
+                    0 0 30px rgba(255, 0, 255, 0.8), /* Magenta */
+                    0 0 40px rgba(0, 255, 255, 0.8); /* Cyan */
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 165, 0, 0.8), /* Orange */
+                    0 0 30px rgba(75, 0, 130, 0.8), /* Indigo */
+                    0 0 40px rgba(173, 255, 47, 0.8); /* Lime Green */
+    }
+    75% {
+        box-shadow: 0 0 20px rgba(238, 130, 238, 0.8), /* Violet */
+                    0 0 30px rgba(255, 20, 147, 0.8), /* Pink */
+                    0 0 40px rgba(0, 191, 255, 0.8);  /* Sky Blue */
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.8),   /* Red */
+                    0 0 30px rgba(0, 255, 0, 0.8),   /* Green */
+                    0 0 40px rgba(0, 0, 255, 0.8);   /* Blue */
+    }
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2a9d8f;
+}
